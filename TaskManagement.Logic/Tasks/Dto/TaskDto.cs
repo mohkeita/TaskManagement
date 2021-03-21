@@ -1,10 +1,9 @@
 using System;
 using TaskManagement.Core.Enums;
 
-
-namespace TaskManagement.Core.Entities
+namespace TaskManagement.Logic.Tasks.Dto
 {
-    public class Task
+    public class TaskDto
     {
         public int Id { get; set; }
         public string Name { get; set; }

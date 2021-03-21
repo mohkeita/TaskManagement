@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using TaskManagement.Infrastructure;
+using TaskManagement.Logic;
 
 namespace TaskManagement.API
 {
@@ -27,6 +29,8 @@ namespace TaskManagement.API
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddLogic();
+            services.AddInfrastructure();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
